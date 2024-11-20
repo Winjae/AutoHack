@@ -50,7 +50,6 @@ def send_can_messages(log_data):
                     )
                     try:
                         bus.send(msg)
-                        #print(f"메시지를 전송했습니다: {msg}")
                     except can.CanError as e:
                         print(f"메시지 전송 실패: {e}")
 
