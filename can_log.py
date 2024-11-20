@@ -32,8 +32,8 @@ def receive_can_messages(channel=0, bitrate=500000, filter_id=None):
                 for i in range(len(msg.data)):
                     can_data += f' {msg.data[i]:02X}'
                 can_data += '\n'
-                if can_data not in write_data:
-                    write_data += can_data
+                #if can_data not in write_data:
+                write_data += can_data
     except KeyboardInterrupt:
         with open(file_name, 'w') as f:
             f.write(write_data[:-1])
